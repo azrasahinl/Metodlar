@@ -1,0 +1,31 @@
+//Binary olarak girilen bir sayının decimal karşılığını bulan ve bu değeri geri döndüren metodu
+//yazınız.
+package algo.örnek.sorular;
+
+import java.util.Scanner;
+
+public class metodornek8 {
+  public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Lütfen ikili bir sayı girin: ");
+String ikiliString = scanner.nextLine();
+// İkili sayıyı onlu sayıya çevirme
+int onluDeger = ikiliyiOnluCevir(ikiliString);
+System.out.println("Onlu değer: " + onluDeger);  
+}
+  public static int ikiliyiOnluCevir(String ikiliString) {
+int onluDeger = 0;
+int uzunluk = ikiliString.length();
+for (int i = 0; i < uzunluk; i++) {
+char basamak = ikiliString.charAt(i);
+int us = uzunluk - 1 - i;
+if (basamak == '1') {
+onluDeger += Math.pow(2, us);
+} else if (basamak != '0') {
+System.out.println("Geçersiz ikili sayı girdiniz.");
+System.exit(1);
+}
+}
+return onluDeger;
+  }
+}
