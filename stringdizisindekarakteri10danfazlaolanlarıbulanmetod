@@ -1,0 +1,27 @@
+
+package newpackage;
+public class algorornek5 {
+  //Kendisine parametre olarak gelen string dizisindeki karakterlerden uzunluğu 10dan fazla olanları
+    //geri döndüren metodu yazınız
+ public static String[] KarakterSayisi(String str[][]){
+     String a[]=new String[9];
+     String bos="";
+     for (int i = 0; i <str.length; i++) {
+         for (int j = 0; j <str[0].length; j++) {
+             if(str[i][j].length()>9)
+             bos+=str[i][j];    
+         }
+         a[i]=bos;
+     }
+     return a;
+ 
+ }
+    public static void main(String[] args) {
+        String dizi[][]={{"ali","veli","abcçdefghkıs"},{"a","b","c"}};
+        String b[]=new String[9];
+        b=KarakterSayisi(dizi);
+        for (int i = 0; i <b.length; i++) {
+            System.out.println(b[i]);
+        }
+    }
+}
