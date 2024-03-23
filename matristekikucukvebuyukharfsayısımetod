@@ -1,0 +1,40 @@
+package newpackage;
+
+public class algoornek30 {
+    public static int[] kucukbuyuk(char karakter[][]) {
+        int sayac1 = 0, sayac2 = 0;
+        int a[] = new int[2];
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (karakter[i][j] >= 'a' && karakter[i][j] <= 'z') {
+                    sayac1++;
+                }
+                if (karakter[i][j] >= 'A' && karakter[i][j] <= 'Z') {
+                    sayac2++;
+                }
+            }
+        }
+
+        a[0] = sayac1;
+        a[1] = sayac2;
+
+        return a;
+    }
+
+    public static void main(String[] args) {
+        char[][] karakterDizisi = {
+                {'a', 'B', 'c', 'D', 'e'},
+                {'F', 'g', 'H', 'i', 'J'},
+                {'K', 'l', 'M', 'n', 'o'},
+                {'P', 'q', 'r', 's', 't'},
+                {'U', 'v', 'w', 'x', 'y'},
+                {'z', 'A', 'B', 'C', 'D'}
+        };
+
+        int[] sonuc = kucukbuyuk(karakterDizisi);
+
+        System.out.println("Kucuk harf sayisi: " + sonuc[0]);
+        System.out.println("Buyuk harf sayisi: " + sonuc[1]);
+    }
+}
