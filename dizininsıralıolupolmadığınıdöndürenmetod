@@ -1,0 +1,17 @@
+//Kendisinne parametre olarak gelen tamsayı dizisinin sıralı olup olmadığını geri döndüren metod
+package algo.örnek.sorular;
+public class metodornek11 {
+ public static boolean SıralıDizi(int dizi[]){
+     for (int i = 1; i <dizi.length; i++) {
+         if(dizi[i-1]>dizi[i]){
+             return false;
+         }
+     }
+     return true;
+ }
+    public static void main(String[] args) {
+        int a[]={1,2,3,4,5,6,7};
+        boolean x=SıralıDizi(a);
+        System.out.println(x);
+    }
+}
