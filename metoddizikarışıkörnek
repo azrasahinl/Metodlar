@@ -1,0 +1,37 @@
+//6 elemanlı bir dizi oluşturmak üzere Dizi Oluştur() adında java metodu yazılacaktır. 
+//Bu metod kendisine parametre olarak gelen 2 rastgele sayıyı (0-10 ve 50-100 arasında )  almaktadır.
+//Metod bu sayılar arasından rastgele birer sayı üreterek dizi elemanlarını oluşturmaktadır ve bu diziyi geri döndürmektedir. 
+//Oluşturulacak MaxBul() metodu ise kendisine parametre olarak gelen bu dizinin en büyük elemanını bulup geri döndürmektedir. Kodu yazınız. 
+package newpackage;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class algoornek42 {
+     public static int[] diziOlustur(int num1,int num2){
+        int[] dizi = new int[6];
+        Random random = new Random();
+        for (int i = 0; i < 6; i++) {
+            dizi[i] = random.nextInt(num1,num2);
+        }
+        return dizi;
+    }
+
+    public static int maxBul(int[] dizi){
+        int max = dizi[0];
+        for (int i = 1; i < dizi.length; i++) {
+            if (max<dizi[i]) max = dizi[i];
+        }
+        return max;
+    }
+    public static void main(String[] args) {
+        int sayi1=(int)(Math.random()*10);
+        int sayi2=50+(int)(Math.random()*50);
+        System.out.println(sayi1);
+        System.out.println(sayi2);
+        int[] dizi = diziOlustur(sayi1,sayi2);
+        System.out.println(Arrays.toString(dizi));
+        System.out.println(maxBul(dizi));
+    }
+}
+
