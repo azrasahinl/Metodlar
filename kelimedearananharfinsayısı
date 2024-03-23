@@ -1,0 +1,24 @@
+//Kullanıcının girdiği metinde, yine kullanıcının girmiş olduğu harfi arayarak,
+//sayısını ekrana getiren metot
+package algo.örnek.sorular;
+
+import java.util.Scanner;
+
+public class metodornek1 {
+  public static int HarfBul(String str,char h){
+      int sayac=0;
+      for (int i = 0; i <str.length(); i++) {
+          if(str.charAt(i)==h)
+              sayac++;
+      }
+      return sayac;
+  }
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        String s=k.next();
+        char x=k.next().charAt(0);
+        int sayi=HarfBul(s,x);
+        System.out.println(sayi);
+    }
+  
+}
