@@ -1,0 +1,22 @@
+//İki boyutlu string dizisi içindeki ilk karakteri 'A' 
+//olan stringleri bulup ekrana yazan programı çalışır şekilde veriniz
+package newpackage;
+
+import java.util.Scanner;
+
+public class algoornek21 {
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        String dizi[][]=new String[2][2];
+  
+        for (int i = 0; i <2; i++) {
+            for (int j = 0; j < 2; j++) {
+               dizi[i][j]=k.next();
+               if(dizi[i][j].charAt(0)=='A')
+                    System.out.println(dizi[i][j]);
+            
+            }
+        }
+    }
+  
+}
