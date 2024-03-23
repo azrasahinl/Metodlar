@@ -1,0 +1,26 @@
+//Kpog bir 2 boyutlu string dizisinde palindrom olan strinleri geri döndüren metod
+package newpackage;
+public class algoornek28 {
+ public static String[] Palindrom(String str[][]){
+     
+     String palindrom[]=new String[str.length];
+     for (int i = 0; i <str.length; i++) {
+         String bos=" ";
+         for (int j = 0; j <str[i].length; j++) {
+             if(str[i][j].charAt(i)==str[i][j].charAt(str[i][j].length()-1-i)){
+                 bos+=str[i][j];
+             }
+         }
+         palindrom[i]=bos;
+         
+     }return palindrom;
+ }
+    public static void main(String[] args) {
+        String dizi[][]={{"kazak","ali","ada"},{"azra","kek","kabak"}};
+        String b[]=new String[dizi.length];
+        b=Palindrom(dizi);
+        for (int i = 0; i <b.length; i++) {
+            System.out.println(b[i]);
+        }
+    }
+}
