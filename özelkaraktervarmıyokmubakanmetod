@@ -1,0 +1,18 @@
+
+package newpackage;
+public class algoornek41 {
+  public static boolean OzelKarakterMi(char karakter){
+      String ozelkarakterler="!@#$%*&+";
+      for (int i = 0; i <ozelkarakterler.length(); i++) {
+          if(ozelkarakterler.charAt(i)==karakter){
+              return true;
+          }
+      }
+      return false;
+  }
+    public static void main(String[] args) {
+        boolean x=OzelKarakterMi('%');
+        System.out.println(x);
+    }
+  
+}
