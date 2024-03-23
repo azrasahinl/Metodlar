@@ -1,0 +1,47 @@
+
+package algo.örnek.sorular;
+public class algofinal2017_1 {
+  public static int hexadecimalToDecimal(String hexNumber) {
+
+    // Hexadecimal sayı sisteminin taban değerini tanımla
+    int hexBase = 16;
+
+    // Hexadecimal sayıyı onluğa çevirmek için gerekli değişkenleri tanımla
+    int decimalNumber = 0;
+    int powerOfBase = 1;
+
+    // Hexadecimal sayının her bir basamağını ters sırada işle
+    for (int i = hexNumber.length() - 1; i >= 0; i--) {
+
+        // Hexadecimal basamağı ASCII tablosundan hesapla
+        int hexDigit = hexNumber.charAt(i) - '0';
+
+        // Hexadecimal basamağını onluğa çevir
+        if (hexDigit >= 'A' && hexDigit <= 'F') {
+            hexDigit = hexDigit - 'A' + 10;
+        }
+
+        // Onluğa çevrilmiş basamağı toplama işlemine ekle
+        decimalNumber += hexDigit * powerOfBase;
+
+        // Taban değerini artır
+        powerOfBase *= hexBase;
+    }
+
+    // Onluğa çevrilmiş sayıyı döndür
+    return decimalNumber;
+}
+    public static void main(String[] args) {
+        // Hexadecimal sayıyı tanımla
+String hexNumber = "1234AB";
+
+// Hexadecimal sayıyı on tabanına çevir
+int decimalNumber = hexadecimalToDecimal(hexNumber);
+
+// Onluğa çevrilmiş sayıyı yazdır
+System.out.println("Hexadecimal sayi : " + hexNumber);
+System.out.println("On tabaninda degeri: " + decimalNumber);
+
+    }
+ 
+}
