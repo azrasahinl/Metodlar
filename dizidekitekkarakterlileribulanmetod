@@ -1,0 +1,27 @@
+
+package newpackage;
+public class algoornek25 {
+ public static String[] Tekkarakter(String str[][]){
+     String tek[]=new String[str.length];
+     for (int i = 0; i <str.length; i++) {
+         String bos=" ";
+
+         for (int j = 0; j <str[0].length; j++) {
+             if(str[i][j].length()==1)
+                 bos+=str[i][j];
+         }
+           tek[i]=bos;
+     }
+   
+     return tek;
+     
+ }
+    public static void main(String[] args) {
+    String dizi[][]={{"Azra","a"},{"ali","b"}};
+    String c[]=Tekkarakter(dizi);
+        for (int i = 0; i <c.length; i++) {
+          String b=c[i];
+            System.out.println(b);
+        }
+    }
+}
