@@ -1,0 +1,15 @@
+package algo.örnek.sorular;
+//Palindrom mu
+public class metodornek9 {
+ public static boolean PalindromMu(String str){
+     for (int i = 0; i <str.length()/2; i++) {
+         if(str.charAt(i)!=str.charAt(str.length()-1-i)){
+             return false;
+         }
+       }return true;
+    }
+    public static void main(String[] args) {
+        boolean x=PalindromMu("kazak");
+        System.out.println(x);
+    }
+}
