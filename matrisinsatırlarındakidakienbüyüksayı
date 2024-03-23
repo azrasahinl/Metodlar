@@ -1,0 +1,26 @@
+
+package newpackage;
+public class algoornek18 {
+    public static int[] enbuyuk(int matris[][]){
+        int enbuyukler[]=new int[matris.length];
+        for (int i = 0; i <3; i++) {
+            int enbuyuk=matris[i][0];
+            for (int j =1; j <3; j++) {
+                if(matris[i][j]>enbuyuk)
+                    enbuyuk=matris[i][j];
+            }
+            enbuyukler[i]=enbuyuk;
+        }
+        return enbuyukler;
+    }
+    public static void main(String[] args) {
+        int dizi[][]={
+            {1, 4, 3},
+            {9, 11, -6},
+            {5, 5, 15} };
+       int a[]=enbuyuk(dizi);
+        for (int i = 0; i <a.length; i++) {
+            System.out.println(a[i]);
+        }
+}
+}
