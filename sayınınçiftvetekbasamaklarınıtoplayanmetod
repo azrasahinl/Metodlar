@@ -1,0 +1,38 @@
+//Klavyeden girilen ve kendilerine parametre olarak gelen bu sayının çift basamaklarını ve tek
+//basamaklarını toplayarak ekrana yazan java metotlarını yazınız?
+package algo.örnek.sorular;
+
+import java.util.Scanner;
+
+public class metodornek4 {
+public static void main(String[] args) {
+Scanner in = new Scanner(System.in);
+System.out.print("Sayi giriniz:");
+int n = in.nextInt();
+System.out.print("Cift basamakların toplami: ");
+System.out.println(cifttopla(n));
+System.out.print("Tek basamakların toplami: ");
+System.out.println(tektopla(n));
+}
+public static int cifttopla(int n) {
+int cifttoplam = 0;
+while (n > 0) {
+int digit = n % 10;
+if (digit % 2 == 0)
+cifttoplam += digit;
+n /= 10;
+}
+return (cifttoplam);
+}
+public static int tektopla(int n) {
+int tektoplam = 0;
+while (n > 0) {
+int digit = n % 10;
+if (digit % 2 != 0)
+tektoplam += digit;
+n /= 10;
+}
+return (tektoplam);  
+}
+}
+
