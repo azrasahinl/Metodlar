@@ -1,0 +1,23 @@
+//Kendisine parametre olarak gelen tamsayı dizisindeki her elemanı bir arttırıp dönddüren metod
+package algo.örnek.sorular;
+
+import java.util.Scanner;
+
+public class metodornek12 {
+   public static int[] Arttır(int dizi[]){
+       int yeni[]=new int[dizi.length];
+       for (int i = 0; i <dizi.length; i++) {
+           yeni[i]=dizi[i]+1;
+       }
+       return yeni;
+   } 
+    public static void main(String[] args) {
+  int a[]={1,2,3,4,5};
+  int b[]=new int[5];
+        for (int i = 0; i <b.length; i++) {
+         b=Arttır(a);
+        System.out.println(b[i]);
+        }
+        
+    }
+}
