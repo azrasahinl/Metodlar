@@ -1,0 +1,21 @@
+//Kendisine parametre olarak gelen tamsayı dizisindeki en küçük elemanın indisini geri dönddüren metod
+package algo.örnek.sorular;
+public class metodornek10 {
+public static int Enkucuk(int dizi[]){
+    int enkucuk=dizi[0];
+    int enkucukindis=0;
+    for (int i = 1; i <dizi.length; i++) {
+       if(dizi[i]<enkucuk){
+           enkucuk=dizi[i];
+           enkucukindis=i;
+       }
+    }
+  
+    return enkucukindis; 
+ }
+    public static void main(String[] args) {
+      int a[]={5,7,2,9};
+      int x=Enkucuk(a);
+        System.out.println(x);
+    }
+}
