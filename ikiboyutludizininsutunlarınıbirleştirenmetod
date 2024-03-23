@@ -1,0 +1,30 @@
+//kpog iki boyutlu string dizisinde sütünlardaki stringleri bir araya getirip
+//tek boyutlu string dizisi oluşturan ve bu diziyi geri döndüren metod
+package newpackage;
+
+public class algoornek33 {
+    public static String[] Birlestir(String str[][]) {
+        String sutun1 = "";
+        String sutun2 = "";
+        
+        for (int i = 0; i < str.length; i++) {
+            sutun1 += str[i][0];
+            sutun2 += str[i][1];
+        }
+        
+        String birlesik[] = {sutun1, sutun2};
+        return birlesik;
+    }
+
+    public static void main(String[] args) {
+        String s[][] = {{"emine", "azra"}, {"a", "b"}};
+        String sonuc[] = Birlestir(s);
+
+        
+        for (int i = 0; i < sonuc.length; i++) {
+            System.out.println(sonuc[i]);
+        }
+    }
+}
+
+
