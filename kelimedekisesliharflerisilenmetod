@@ -1,0 +1,24 @@
+//Parametre olarak gelen klavyeden girilen bir metnin içerisindeki sesli harflerin bulunmadığı sonuc isminde 
+//yeni bir string oluşturarak bunu geri döndüren seslisil() 
+//java metodunu main() ile birlikte yazınız.
+package newpackage;
+
+public class algoornek43 {
+
+    public static String SesliSil(String str) {
+        String sonuc = "";
+        String sesliHarfler = "aeıiüuoö";
+        for (int i = 0; i < str.length(); i++) {
+            if (!sesliHarfler.contains(str.charAt(i) + "")) {
+                sonuc += str.charAt(i);
+            }
+        }
+        return sonuc;
+    }
+
+    public static void main(String[] args) {
+        String a = SesliSil("azra");
+        System.out.println(a); // "zr" yazdırır
+    }
+}
+
