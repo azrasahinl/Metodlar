@@ -1,0 +1,21 @@
+
+package algo.örnek.sorular;
+
+import java.util.Scanner;
+
+public class metodornek2 {
+ //Kullanıcının girdiği string ifadeyi tersten ekrana yazan metot geri döndğrecek
+    public static String TersCevir(String str){
+        String s=" ";
+        for (int i =str.length()-1; i>=0; i--) {
+            s+=str.charAt(i);
+        }
+        return s;
+    }
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        String str1=k.next();
+        String a=TersCevir(str1);
+        System.out.println(a);
+    }
+}
