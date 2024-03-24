@@ -1,0 +1,16 @@
+
+package büthazırlık;
+public class bütörnek10 {
+  public static String kucugubuyuk(String str){
+      String toplam="";
+      for (int i = 0; i < str.length(); i++) {
+          if(str.charAt(i)>='a' && str.charAt(i)<='z')
+          toplam=toplam+(char)((str.charAt(i)-32));
+      }
+      return toplam;
+  }  
+    public static void main(String[] args) {
+        String ss=kucugubuyuk("BilgiSAYAR");
+        System.out.println(ss);
+    }
+}
