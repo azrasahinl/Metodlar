@@ -1,0 +1,15 @@
+
+package büthazırlık;
+public class bütörnek15 {
+ public static boolean avarmı(String a){
+     for (int i = 0; i < a.length(); i++) {
+         if(a.charAt(i)=='a')
+             return true;
+     }
+     return false;
+ }
+    public static void main(String[] args) {
+        boolean x=avarmı("elif");
+        System.out.println(x);
+    }
+}
