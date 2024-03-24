@@ -1,0 +1,23 @@
+
+package büthazırlık;
+
+public class bütörnek16 {
+    public static void main(String[] args) {
+       
+        
+        boolean a=palindrommu("kazak");
+        System.out.println(a);
+    }
+
+    private static boolean palindrommu(String a) {
+        String x = "";
+        boolean y = false;
+        for(int i=a.length()-1; i>=0; i--){
+            x=x+a.charAt(i);
+        }
+        if(x.equals(a))
+            y=true;
+        return y;
+    }
+}
+
