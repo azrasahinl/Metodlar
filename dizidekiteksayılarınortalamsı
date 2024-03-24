@@ -1,0 +1,23 @@
+
+package büthazırlık;
+public class bütörnek33 {
+  public static double tekortalama(int a[]){
+      double ortalama=0;
+      int toplam=0;
+      int sayac=0;
+      for (int i = 0; i <a.length; i++) {
+          if(a[i]%2!=0){
+              sayac++;
+              toplam+=a[i];
+          ortalama=toplam/sayac;
+      }
+  }  
+               return ortalama;
+
+}
+    public static void main(String[] args) {
+       int b[]={3,4,2,5,7,8,10};
+       double x=tekortalama(b);
+        System.out.println(x);
+    }
+}
