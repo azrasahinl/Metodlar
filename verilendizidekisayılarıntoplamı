@@ -1,0 +1,18 @@
+
+package büthazırlık;
+public class bütörnek17 {
+ public static int dizitoplam(int a[]){
+     int toplam=0;
+     for (int i = 0; i < a.length; i++) {
+         toplam+=a[i];
+     }
+     return toplam;
+ }
+    public static void main(String[] args) {
+    int b[]={1,2,3,4};
+    int x=dizitoplam(b);
+        System.out.println(x);    
+    }
+         
+  }  
+
