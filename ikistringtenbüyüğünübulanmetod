@@ -1,0 +1,22 @@
+
+package büthazırlık;
+
+import java.util.Scanner;
+
+public class bütörnek13 {
+    public static String buyukstring(String a,String b){
+        if (a.length()>b.length()) {
+            return a;
+        }
+        return b;
+    }
+    public static void main(String[] args) {
+        Scanner k=new Scanner(System.in);
+        System.out.println("Bir string giriniz");
+        String str=k.nextLine();
+        System.out.println("ikinci stringi giriniz");
+        String str2=k.nextLine();
+        String s=buyukstring(str,str2);
+        System.out.println(s);
+    }
+}
