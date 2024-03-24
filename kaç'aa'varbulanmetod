@@ -1,0 +1,19 @@
+
+package büthazırlık;
+public class bütörnek12 {
+  public static int kacaavar(String a){
+      int sayac=0;
+      for (int i = 0; i <a.length(); i++) {
+          if (a.charAt(i)=='a' && a.charAt(i+1)=='a') {
+              sayac++;
+             i++; //sout(sayac); da yapabilirdik
+          }
+      }
+      return sayac;
+  }
+    public static void main(String[] args) {
+        int y=kacaavar("maalesefaayaa");
+        System.out.println(y);
+    }
+  
+}
