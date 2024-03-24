@@ -1,0 +1,16 @@
+
+package büthazırlık;
+public class bütörnek14 {
+    public static int kelimesayisi(String str){
+     int sayac=0;
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i)==' ')
+                sayac++;
+        }
+        return sayac+1;
+    }
+    public static void main(String[] args) {
+        int x=kelimesayisi("Ali çok üzülüyor");
+        System.out.println(x);
+    }
+}
